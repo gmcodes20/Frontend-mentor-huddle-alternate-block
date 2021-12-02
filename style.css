@@ -1,0 +1,397 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@700&display=swap");
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-pink: hsl(322, 100%, 66%);
+  --clr-light-pink: hsl(321, 100%, 78%);
+  --clr-light-red: hsl(0, 100%, 63%);
+
+  --clr-pri-text: hsl(192, 100%, 9%);
+  --clr-sec-text: hsl(207, 100%, 98%);
+}
+/* .wrapper {
+  max-width: 1440px;
+  min-width: 375px;
+} */
+
+h1,
+h2,
+h3 {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.main {
+  position: relative;
+  padding-bottom: 10rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  max-width: 70ch;
+}
+
+.block {
+  display: block;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.paragraph-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.txt-dark {
+  color: var(--clr-pri-text);
+}
+
+.bg-dark {
+  background-color: var(--clr-pri-text);
+}
+
+.bg-light {
+  background-color: var(--clr-sec-text);
+}
+
+.bg-pink {
+  background-color: var(--clr-pink);
+}
+
+.txt-p1 {
+  font-size: 4.5rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+.txt-h1 {
+  font-size: 2.2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.txt-h2 {
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: var(--clr-pri-text);
+  padding-block: 1.5rem;
+  text-align: center;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.container {
+  width: 90%;
+  margin-inline: auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  font-weight: 600;
+  background-color: var(--btn-bck, var(--clr-pink));
+  border-radius: 30px;
+  color: var(--btn-clr, #fff);
+  transition: 0.5s;
+  box-shadow: 1px 1px 5px 1px var(--clr-pri-text);
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.btn:hover {
+  --btn-bck: var(--clr-light-pink);
+}
+
+.flow > * {
+  padding-top: var(--flow-gap, 2rem);
+}
+
+.nav-btn {
+  --btn-bck: #fff;
+  --btn-clr: var(--clr-pri-text);
+
+  /* padding-inline: 1rem; */
+}
+
+.nav-btn:hover {
+  --btn-bck: #fff;
+  --btn-clr: rgba(0, 0, 0, 0.521);
+}
+
+.flex {
+  display: flex;
+  flex-direction: var(--direction, row);
+  gap: var(--flex-gap, 2rem);
+}
+
+.flex-dir {
+  flex-direction: column;
+}
+
+.main-header {
+  padding-block: 2rem;
+  background-image: url("./images/bg-hero-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: var(--clr-sec-text);
+}
+
+.main-header > .flex {
+  margin-inline: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-hero {
+  padding-top: 5rem;
+}
+
+.top-hero--child {
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px var(--clr-pri-text);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ready .card {
+  position: absolute;
+  left: 50%;
+  bottom: -4rem;
+  transform: translateX(-50%);
+  background-color: #fff;
+  z-index: 200;
+  width: min(90%, 450px);
+  /* min-width: ; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.ready h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+.grow-together-details {
+  text-align: center;
+}
+
+/* Footer */
+
+.footer {
+  padding-top: 8rem;
+  padding-bottom: 2rem;
+  background-color: var(--clr-pri-text);
+  color: #fff;
+}
+
+.footer-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-areas:
+    "logo "
+    "contact"
+    "link-top"
+    "link-bottom"
+    "socials"
+    "attribution";
+}
+
+.top-list {
+  grid-area: link-top;
+}
+
+.down-list {
+  grid-area: link-bottom;
+}
+
+.footer-logo {
+  grid-area: logo;
+}
+
+.logo-img {
+  filter: invert(50%) sepia(0%) saturate(7488%) hue-rotate(108deg)
+    brightness(280%) contrast(200%);
+}
+
+.address {
+  --flex-gap: 2rem;
+  align-items: flex-start;
+}
+
+.address-img {
+  flex-shrink: 0;
+  padding-top: 5px;
+}
+
+.address .paragraph-text {
+  text-align: left;
+  /* flex-basis: 40%; */
+}
+
+/* .address-img {
+} */
+
+.contact-us {
+  grid-area: contact;
+  --flow-gap: 2rem;
+  --flex-gap: 2rem;
+  justify-content: space-between;
+}
+
+.contact-us-details {
+  --flex-gap: 1.5rem;
+}
+
+.contact-us-top {
+  --flow-gap: 1.5rem;
+}
+
+.flow-not-first > *:where(:not(:first-child)) {
+  padding-top: 1rem;
+}
+
+.footer-list {
+  --flex-gap: 1.5rem;
+  flex-direction: column;
+}
+
+.footer a {
+  color: #fff;
+}
+
+.footer-social {
+  font-size: 2rem;
+  flex-direction: row;
+  --flex-gap: 2rem;
+  grid-area: socials;
+  align-self: center;
+  justify-self: center;
+  cursor: pointer;
+  transition: 1.5s;
+}
+
+.footer i {
+  transition: 0.5s;
+}
+
+.footer-social > *:hover {
+  color: var(--clr-pink);
+}
+
+.attribution-level {
+  grid-area: attribution;
+  align-self: center;
+  justify-self: center;
+}
+
+@media (min-width: 650px) {
+  p {
+    max-width: 40ch;
+  }
+  .txt-h1,
+  .paragraph-text,
+  .txt-h2 {
+    text-align: left;
+  }
+
+  .main-header {
+    --flex-gap: 1rem;
+  }
+
+  .flex-dir:where(:not(.main-header)) {
+    flex-direction: row;
+  }
+
+  .top-hero > .flex-dir {
+    text-align: left;
+    flex-direction: row;
+    --flex-gap: 4rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .top-hero--child {
+    align-items: flex-start;
+    --flex-gap: 2rem;
+  }
+
+  .card {
+    flex-direction: row;
+    padding: 1.5rem;
+    padding-left: 4rem;
+  }
+
+  .grow-together-details,
+  .your-user-details {
+    order: -1;
+  }
+
+  .grow-together-img,
+  .flowing-conversation-img,
+  .your-user-img {
+    flex-basis: 40%;
+  }
+
+  /* .ready h2 {
+    font-size: 1.5rem;
+  } */
+
+  .footer-grid {
+    grid-template-areas:
+      "logo logo logo . "
+      "contact link-top link-bottom socials"
+      "contact . . attribution";
+  }
+}
+
+@media (max-width: 500px) {
+  .btn {
+    padding-inline: 1rem;
+  }
+}
